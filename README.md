@@ -10,7 +10,7 @@ These websites are for practice only,
 please inform me to remove immediately if any infringement caused.
 
 - left:accordian
-- mid:card
-- right:add-cart
+- mid:filp-cards
+- right:add-to-cart
 
 ![image](https://github.com/vivianafu/JQuery-practice/blob/master/preview2-01.jpg)

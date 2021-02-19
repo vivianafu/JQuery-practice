@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Accordion</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .accordion {
+            /* border:1px solid grey; */
+            /* background:white; */
+            height: 500px;
+        }
+
+        .accordion a {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            background: rgb(247, 233, 204);
+            cursor: pointer;
+            /* border: 1px solid rgb(165, 165, 165); */
+            display: block;
+            border-top: rgb(252, 228, 164) 5px solid;
+            margin: 2px;
+        }
+
+        .accordion a.active {
+            border-top: rgb(255, 208, 0) 5px solid;
+        }
+
+        .description {
+            transition: .2s;
+            overflow: hidden;
+            max-width: 0;
+            /* width:100%; */
+            opacity: 0;
+        }
+
+        .description.active {
+            max-width: 100%;
+            flex: 1;
+            padding: 10px;
+            /* background: pink; */
+            opacity: 1;
+        }
+
+        img {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container"> -->
+    <div class="container accordion d-flex p-0 my-5" id="accordion">
+        <a class="d-block p-2 active">Sagrada Família</a>
+        <div class=" description active">
+            <p>The Basílica de la Sagrada Família was the inspiration of a bookseller, Josep Maria Bocabella, founder of
+                Asociación Espiritual de Devotos de San José (Spiritual Association of Devotees of St. Joseph).
+                After a visit to the Vatican in 1872, Bocabella returned from Italy with the intention of building a
+                church inspired by the basilica at Loreto.The apse crypt of the church, funded by donations, was begun
+                19 March 1882, on the festival of St. Joseph, to the design of the architect Francisco de Paula del
+                Villar, whose plan was for a Gothic revival church of a standard form.The apse crypt was completed
+                before Villar's resignation on 18 March 1883, when Antoni Gaudí assumed responsibility for its design,
+                which he changed radically.Gaudi began work on the church in 1883 but was not appointed Architect
+                Director until 1884.</p>
+            <img class="m-3" src="images/La Sagrada Familia2.jpg" alt="">
+            <img class="m-3" src="images/La Sagrada Familia1.jpg" alt="">
+        </div>
+        <a class="p-2">Park Güell</a>
+        <div class="description ">
+            <p>Parc Güell (Catalan: Parc Güell ; Spanish: Parque Güell) is a public park system composed of gardens and
+                architectural elements located on Carmel Hill, in Barcelona, Catalonia, Spain. Carmel Hill belongs to
+                the mountain range of Collserola – the Parc del Carmel is located on the northern face. Park Güell is
+                located in La Salut, a neighborhood in the Gràcia district of Barcelona. With urbanization in mind,
+                Eusebi Güell assigned the design of the park to Antoni Gaudí, a renowned architect and the face of
+                Catalan modernism.<br>
+                The park was built from 1900 to 1914 and was officially opened as a public park in 1926. In
+                1984,UNESCOdeclared the park a World Heritage Site under "Works of Antoni Gaudí".</p>
+            <img class="m-3 preview" src="images/PARK.jpg" alt="">
+            <img class="m-3" src="images/Park2.jpg" alt="">
+        </div>
+        <a class="p-2">València</a>
+        <div class="description ">
+            <p>Valencia is the capital of the autonomous community of Valencia and the third-largest city in Spain after
+                Madrid and Barcelona, surpassing 800,000 inhabitants in the municipality. The wider urban area also
+                comprising the neighbouring municipalities has a population of around 1.6 million. Valencia is Spain's
+                third-largest metropolitan area, with a population ranging from 1.7 to 2.5 million depending on how the
+                metropolitan area is defined.
+                <br>The Port of Valencia is the 5th-busiest container port in Europe and the busiest container port on
+                the Mediterranean Sea. The city is ranked as a Gamma-level global city by the Globalization and World
+                Cities Research Network.
+            </p>
+            <img class="m-3" src="images/valencia.jpg" alt="">
+            <img class="m-3" src="images/valencia2.jpg" alt="">
+        </div>
+        <a class="p-2">Casares, Málaga</a>
+        <div class="description ">
+            <p>Casares is a town and municipality in Spain, located in Málaga province, in the autonomous community of
+                Andalusia.
+                <br>
+                More recent history indicates the old village as the birthplace of the father of Andalusian nationalism,
+                Blas Infante Pérez de Vargas, labor lawyer, politician and writer, who is considered to be the largest
+                historic figure in Andalusia. He was born in 1885 and died during the civil struggle in 1936.
+                Since 1978 the historical and artistic heritage of the village has been officially protected.
+            </p>
+            <img class="m-3" src="images/Casares.jpg" alt="">
+            <img class="m-3" src="images/Casares2.jpg" alt="">
+        </div>
+    </div>
+
+    <!-- </div> -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        $("#accordion a").on("click", function () {
+            // alert("hi")
+            $(".description").removeClass("active");
+            $("#accordion a").removeClass("active");
+            $(this).addClass("active");
+            $(this).next(".description").addClass("active");
+        })
+    </script>
+</body>
+
+</html>

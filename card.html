@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Card</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<style>
+  body {
+    margin: 50px;
+    background: rgb(245, 221, 221);
+
+  }
+
+  .title {
+    padding: 30px 30px;
+  }
+
+  .card {
+    position: relative;
+    transform-style: preserve-3d;
+    float: left;
+    margin: 0 20px 20px;
+    width: 100px;
+    height: 140px;
+    padding: 80px 40px;
+  }
+
+  .card.active {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+  }
+
+  .card img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+      15px 15px 15px rgba(0, 0, 0, 0.1),
+      inset -50px -50px 50px rgba(255, 255, 255, 0.2),
+      inset 50px 50px 50px rgba(0, 0, 0, 0.1);
+  }
+
+  .front {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+  }
+
+  .back {}
+
+  .transition {
+    transition: all .5s;
+    -webkit-transition: all .5s;
+  }
+
+  .box:hover {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+  }
+</style>
+
+<body>
+  <div class="title">說明：一次只能開兩張牌。</div>
+
+  <div class="container">
+
+    <div class="card transition animate__animated " data-name="a">
+      <div class="card_wrap">
+        <img class="back" src="images/card.jpg">
+        <img class="front" src="images/usagi2.jpg" alt="">
+      </div>
+    </div>
+    <div class="card transition animate__animated" data-name="b">
+      <div class="card_wrap">
+        <img class="back" src="images/card.jpg">
+        <img class="front" src="images/usagi1.jpg" alt="">
+      </div>
+    </div>
+    <div class="card transition animate__animated " data-name="c">
+      <div class="card_wrap">
+        <img class="back" src="images/card.jpg">
+        <img class="front" src="images/usagi2.jpg" alt="">
+      </div>
+    </div>
+    <div class="card transition animate__animated" data-name="d">
+      <div class="card_wrap">
+        <img class="back" src="images/card.jpg">
+        <img class="front" src="images/usagi3.jpg" alt="">
+      </div>
+    </div>
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script>
+
+
+    let times = 0
+    $(".card").click(function () {
+      times++;
+
+
+      console.log(times);
+
+      if (times % 3 == 0) {
+        $(this).addClass("animate__shakeY");
+        $(".card").removeClass("active");
+      } else { $(this).toggleClass("active") }
+    })
+
+    $(".card").on("animationend", function () {
+      // 監聽當動畫結束後移除 class
+      $(this).removeClass("animate__shakeY");
+    });
+
+
+  </script>
+</body>
+
+</html>
